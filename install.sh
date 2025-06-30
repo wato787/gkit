@@ -10,7 +10,7 @@ NC='\033[0m' # No Color
 
 # Default values
 INSTALL_DIR="/usr/local/bin"
-REPO_OWNER="your-username"
+REPO_OWNER="wato787"
 REPO_NAME="gkit"
 
 # Detect OS and architecture
