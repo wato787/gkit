@@ -30,12 +30,12 @@ func runGitCommand(args ...string) error {
 
 func expandBranchPrefix(branch string) string {
 	prefixMap := map[string]string{
-		"f/": "feature/",
+		"f/":   "feature/",
 		"fix/": "fix/",
-		"h/": "hotfix/",
-		"r/": "release/",
-		"b/": "bugfix/",
-		"e/": "epic/",
+		"h/":   "hotfix/",
+		"r/":   "release/",
+		"b/":   "bugfix/",
+		"e/":   "epic/",
 	}
 	
 	for prefix, expansion := range prefixMap {
