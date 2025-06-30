@@ -1,37 +1,37 @@
 # gkit
 
-Git CLI Tools - Git操作を簡略化するCLIツール群
+Git CLI Tools - Git 操作を簡略化する CLI ツール群
 
 ## 概要
 
-gkitは、日常的なGit操作を短縮化するコマンドラインツールです。各コマンドは独立して動作し、対応するGitコマンドの短縮形として機能します。
+gkit は、日常的な Git 操作を短縮化するコマンドラインツールです。各コマンドは独立して動作し、対応する Git コマンドの短縮形として機能します。
 
 ## インストール
 
-### GitHub Releasesから
+### GitHub Releases から
 
 ```bash
 # 最新版をインストール（Linux/macOS）
-curl -sL https://github.com/your-username/gkit/releases/latest/download/install.sh | bash
+curl -sL https://github.com/wato787/gkit/releases/latest/download/install.sh | bash
 
 # 手動インストール
-# https://github.com/your-username/gkit/releases から該当するOSのバイナリをダウンロード
+# https://github.com/wato787/gkit/releases から該当するOSのバイナリをダウンロード
 # /usr/local/bin/ に配置
 ```
 
-### go installから
+### go install から
 
 ```bash
-go install github.com/your-username/gkit/cmd/gs@latest
-go install github.com/your-username/gkit/cmd/ga@latest
-go install github.com/your-username/gkit/cmd/gc@latest
-go install github.com/your-username/gkit/cmd/gp@latest
+go install github.com/wato787/gkit/cmd/gs@latest
+go install github.com/wato787/gkit/cmd/ga@latest
+go install github.com/wato787/gkit/cmd/gc@latest
+go install github.com/wato787/gkit/cmd/gp@latest
 ```
 
 ### ソースからビルド
 
 ```bash
-git clone https://github.com/your-username/gkit.git
+git clone https://github.com/wato787/gkit.git
 cd gkit
 make install
 ```
@@ -76,14 +76,14 @@ gp origin feature/branch   # git push origin feature/branch
 
 `gs -c` でブランチ作成時のみ適用される短縮形：
 
-| 短縮形 | 展開後 |
-|--------|--------|
+| 短縮形 | 展開後     |
+| ------ | ---------- |
 | `f/`   | `feature/` |
-| `fix/` | `fix/` |
-| `h/`   | `hotfix/` |
+| `fix/` | `fix/`     |
+| `h/`   | `hotfix/`  |
 | `r/`   | `release/` |
-| `b/`   | `bugfix/` |
-| `e/`   | `epic/` |
+| `b/`   | `bugfix/`  |
+| `e/`   | `epic/`    |
 
 ## タブ補完
 
