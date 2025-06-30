@@ -9,7 +9,7 @@ YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
 # Default values
-INSTALL_DIR="/usr/local/bin"
+INSTALL_DIR="${INSTALL_DIR:-/usr/local/bin}"
 REPO_OWNER="wato787"
 REPO_NAME="gkit"
 
@@ -57,10 +57,18 @@ curl -sL "$DOWNLOAD_URL" | tar -xz
 # Install binaries
 echo -e "${YELLOW}Installing to $INSTALL_DIR...${NC}"
 
+# Create install directory if it doesn't exist
+if [[ "$INSTALL_DIR" == *"$HOME"* ]]; then
+    mkdir -p "$INSTALL_DIR"
+    USE_SUDO=""
+else
+    USE_SUDO="sudo"
+fi
+
 for cmd in gs ga gc gp; do
     if [ -f "$cmd" ]; then
-        sudo mv "$cmd" "$INSTALL_DIR/"
-        sudo chmod +x "$INSTALL_DIR/$cmd"
+        $USE_SUDO mv "$cmd" "$INSTALL_DIR/"
+        $USE_SUDO chmod +x "$INSTALL_DIR/$cmd"
         echo -e "${GREEN}✓ Installed $cmd${NC}"
     else
         echo -e "${RED}✗ $cmd not found in archive${NC}"
