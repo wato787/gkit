@@ -70,6 +70,7 @@ archives:
     files:
       - README.md
       - LICENSE*
+      - install.sh
 
 checksum:
   name_template: 'checksums.txt'
@@ -83,3 +84,7 @@ changelog:
     exclude:
       - '^docs:'
       - '^test:'
+
+# Add install.sh as a release asset
+extra_files:
+  - glob: install.sh
