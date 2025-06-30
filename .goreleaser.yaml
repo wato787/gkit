@@ -86,5 +86,6 @@ changelog:
       - '^test:'
 
 # Add install.sh as a release asset
-extra_files:
-  - glob: install.sh
+release:
+  extra_files:
+    - glob: install.sh
