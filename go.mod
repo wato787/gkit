@@ -1,4 +1,4 @@
-module gkit
+module github.com/wato787/gkit
 
 go 1.24.2
 
