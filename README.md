@@ -22,6 +22,10 @@ curl -sL https://github.com/wato787/gkit/releases/latest/download/install.sh | b
 ### go install から
 
 ```bash
+# 一括インストール（推奨）
+go install github.com/wato787/gkit/cmd/gkit-installer@latest && gkit-installer
+
+# 個別インストール
 go install github.com/wato787/gkit/cmd/gs@latest
 go install github.com/wato787/gkit/cmd/ga@latest
 go install github.com/wato787/gkit/cmd/gc@latest
